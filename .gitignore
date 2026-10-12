@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+config.toml
+dbdata/
+logs/
+*.log
+*.exe
+*.zip
+contacts*.csv
+draft*.json

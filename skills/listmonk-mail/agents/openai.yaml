@@ -1,0 +1,4 @@
+interface:
+  display_name: "listmonk 邮件管理"
+  short_description: "管理 listmonk 名单导入、邮件草稿与发送结果，配置阿里邮箱并排查启动问题"
+  default_prompt: "使用 $listmonk-mail 整理收件人名单并创建一封可预览的邮件草稿。"
