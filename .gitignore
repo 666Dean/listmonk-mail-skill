@@ -8,6 +8,7 @@ dbdata/
 logs/
 *.log
 *.exe
+!skills/listmonk-mail/assets/listmonk/windows-amd64/listmonk.exe
 *.zip
 contacts*.csv
 draft*.json

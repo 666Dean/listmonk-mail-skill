@@ -1,0 +1,14 @@
+# 示例配置：复制到你选择的部署目录，重命名为 config.toml 后修改。
+# 不含真实账号、密码或业务数据。不要提交修改后的 config.toml。
+[app]
+# 仅本机访问；公网部署应另行配置 HTTPS 反向代理。
+address = "127.0.0.1:9000"
+
+[db]
+# 先单独安装 PostgreSQL 12 或更高版本，并创建空数据库及专用用户。
+host = "127.0.0.1"
+port = 5432
+user = "listmonk"
+password = "REPLACE_WITH_YOUR_DATABASE_PASSWORD"
+database = "listmonk"
+ssl_mode = "disable"

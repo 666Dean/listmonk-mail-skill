@@ -29,7 +29,7 @@ Copy-Item -LiteralPath '.\skills\listmonk-mail' -Destination $targetSkill -Recur
 
 ## 配置与依赖
 
-需要已有 listmonk 实例；Windows 原生程序依赖 PostgreSQL。辅助脚本需要 Python 3.10+，只用标准库，无需 pip 安装。
+已附带 **listmonk v6.2.0 Windows x64 本体**，位于 `skills/listmonk-mail/assets/listmonk/windows-amd64/listmonk.exe`，并附注释配置样例、上游许可证和对应源码。PostgreSQL 需单独安装；不包含任何真实邮箱密码、联系人或数据库。已有实例可直接接入。新部署参见 [本体使用说明](skills/listmonk-mail/references/bundled-listmonk.md)。辅助脚本需要 Python 3.10+，只用标准库，无需 pip 安装。
 
 API 认证：在 listmonk 的 Admin → Users 创建 API 用户和 Token，把 `LISTMONK_URL`、`LISTMONK_API_USER`、`LISTMONK_API_TOKEN` 私下设置到当前运行环境。不要将管理员密码当作 API Token，不要提交密钥或把它发进聊天。
 
@@ -64,4 +64,4 @@ python skills/listmonk-mail/scripts/listmonk_api.py --help
 
 欢迎提交 Issue 或 Pull Request。复现材料使用合成地址和占位内容，不上传真实客户名单、数据库、配置、令牌或完整日志。
 
-详细流程见 [SKILL.md](skills/listmonk-mail/SKILL.md)。MIT 许可覆盖本仓库原创源码和文档；listmonk 本体使用其自身许可证，本仓库不分发它的程序。
+详细流程见 [SKILL.md](skills/listmonk-mail/SKILL.md)。MIT 许可覆盖本仓库原创源码和文档；随附 listmonk 本体及源码使用上游 AGPL-3.0，详见 [第三方程序许可证](skills/listmonk-mail/assets/listmonk/LICENSE)。

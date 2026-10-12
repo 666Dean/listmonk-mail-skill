@@ -9,6 +9,8 @@ description: 管理 listmonk 的邮件名单、订阅者导入、个性化邮件
 
 ## 接入
 
+- 本技能随附官方 listmonk v6.2.0 Windows x64 本体。新部署时读 [references/bundled-listmonk.md](references/bundled-listmonk.md)，程序位于 `assets/listmonk/windows-amd64/listmonk.exe`；PostgreSQL 需单独安装。不要在技能目录写入运行配置或业务数据库。
+
 - 从用户提供的地址或现有部署确定实例；本地默认候选为 `http://127.0.0.1:9000`。先验证网页可访问，不把网页响应当作 API 鉴权成功。
 - 辅助脚本需要 Python 3.10+，仅依赖标准库。以当前技能目录下的 `scripts/listmonk_api.py` 路径执行；命令示例中的相对路径需要展开。
 - API 使用环境变量 `LISTMONK_URL`、`LISTMONK_API_USER`、`LISTMONK_API_TOKEN`。缺少凭据时指导用户在 Admin → Users 创建 API 用户和令牌，并在本机私下配置；不要求用户把密码或令牌发进聊天。详见 [references/workflows.md](references/workflows.md)。
@@ -40,4 +42,4 @@ description: 管理 listmonk 的邮件名单、订阅者导入、个性化邮件
 
 ## 发布边界
 
-这个技能是可移植的操作说明与工具，不包含邮件服务器、发送额度或送达保证。只发布技能源码和合成示例；运行配置、令牌、数据库、日志、邮件正文和客户名单留在用户本地。
+这个技能包含操作说明、辅助工具和官方 Windows x64 listmonk 程序，程序自身使用 AGPL-3.0，附有许可证及对应源码；原创技能使用 MIT。不包含 PostgreSQL 本体、邮箱服务、发送额度或送达保证。运行配置、令牌、数据库、日志、邮件正文和客户名单留在用户本地。
